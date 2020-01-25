@@ -1,0 +1,15 @@
+//Lo stetoscopio ci mostra il contenuto del suono nel dominio della frequenza
+ //Sull'asse delle x le frequenze sull'asse delle y l'ampienza
+ //L'oscilloscopio ci mostra il contenuto del suono nel dominio del tempo sull'asse delle X il tempo e sull'asse delle Y le ampiezze.
+ //Lowpasse uno dei filtri più semplici da usare e significa "passa basso".
+ //Dato un punto di taglio, il filtro di primo ordine attenua 6 dB per ottava.
+ //Per sintesi sottrattiva intendiamo un modello di sintesi sonora utilizzata nella musica elettronica.
+ //Possiamo avere dei sintetizzatori hardware o software.
+ //Il sentetizzatore è uno strumento musicale che appartiene alla famiglia degli elettroni.
+ //è uno strumento in grado di sentetizzare suoni sfruttando parametri modificabili da un attento.
+ //Sintesi: riassunto, fusione di elementi diversi in un tutto unico.
+ //Per sintesi sonora intendiamo il processo di creazione del suono.
+ //Esistono molti tipi di sintesi, i più comuni e usati nel contesto musicale sono: sintesi sottrattiva, sintesi additiva, 
+ //sintesi per modulazione di frequenza, sintesi granulare.
+  import("stdfaust.lib");
+process = no.noise : fi.lowpass(8,6000) : fi.highpass(8,6000);
